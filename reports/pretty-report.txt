@@ -1,0 +1,460 @@
+@Login
+Feature: User Login Validation
+  Validating user login by passing valid credentials
+
+  #Login:
+  Scenario: Verifying User Login with Valid Credentials [90m# (1)Login.feature:6[0m
+    [32mGiven [0m[32mUser Navigates to IMSHealth Login Page[0m        [90m# Login_Test.userNavigatesToIMSLoginPage()[0m
+    [32mWhen [0m[32mUser Enters valid username and password[0m        [90m# Login_Test.userEnterValidUNandPWD()[0m
+    [32mAnd [0m[32mClick sign-in[0m                                   [90m# Login_Test.userClicksOnSigninButton()[0m
+    [32mThen [0m[32mHome page should be displayed[0m                  [90m# Login_Test.homePageShouldBeDisplayed()[0m
+@Users
+Feature: User search validation and creating a new user
+  Searching an User for a specific country and adding a new User
+
+  #Login:
+  Scenario: Verifying User Login with Valid Credentials [90m# (2)User.feature:6[0m
+    [32mGiven [0m[32mUser Navigates to IMSHealth Login Page[0m        [90m# Login_Test.userNavigatesToIMSLoginPage()[0m
+    [32mWhen [0m[32mUser Enters valid username and password[0m        [90m# Login_Test.userEnterValidUNandPWD()[0m
+    [32mAnd [0m[32mClick sign-in[0m                                   [90m# Login_Test.userClicksOnSigninButton()[0m
+    [32mThen [0m[32mHome page should be displayed[0m                  [90m# Login_Test.homePageShouldBeDisplayed()[0m
+
+  #User's Page:
+  Scenario: Application should be able to navigate to Search user page [90m# (2)User.feature:13[0m
+    [32mGiven [0m[32mUser Navigates to Manage Panel[0m                               [90m# User_Test.user_Navigates_to_Manage_Panel()[0m
+    [32mAnd [0m[32mUser clicks on User link[0m                                       [90m# User_Test.user_clicks_on_User_link()[0m
+    [32mThen [0m[32mUser search screen should be displayed[0m                        [90m# User_Test.user_search_screen_should_be_displayed()[0m
+
+  #Searching User based on the Country:
+  Scenario Outline: Application should be able to search users [90m# (2)User.feature:19[0m
+    [36mGiven [0m[36mApplication user is on  search user page[0m
+    [36mWhen [0m[36mSelect "<Country>" from the Country drop down[0m
+    [36mAnd [0m[36mClick search button[0m
+    [36mThen [0m[36mSearch results should be displayed[0m
+    [36mAnd [0m[36mValidate search results are from the selected country.[0m
+
+    Examples: 
+
+  @Users
+  Scenario Outline: Application should be able to search users [90m# (2)User.feature:29[0m
+    [32mGiven [0m[32mApplication user is on  search user page[0m             [90m# User_Test.application_user_is_on_search_user_page()[0m
+    [32mWhen [0m[32mSelect "[0m[32m[1mIndia[0m[32m" from the Country drop down[0m             [90m# User_Test.select_from_the_Country_drop_down(String)[0m
+    [32mAnd [0m[32mClick search button[0m                                    [90m# User_Test.click_search_button()[0m
+    [32mThen [0m[32mSearch results should be displayed[0m                    [90m# User_Test.search_results_should_be_displayed()[0m
+    [32mAnd [0m[32mValidate search results are from the selected country.[0m [90m# User_Test.validate_search_results_are_from_the_selected_country()[0m
+
+  @Users
+  Scenario Outline: Application should be able to search users [90m# (2)User.feature:30[0m
+    [32mGiven [0m[32mApplication user is on  search user page[0m             [90m# User_Test.application_user_is_on_search_user_page()[0m
+    [32mWhen [0m[32mSelect "[0m[32m[1mJapan[0m[32m" from the Country drop down[0m             [90m# User_Test.select_from_the_Country_drop_down(String)[0m
+    [32mAnd [0m[32mClick search button[0m                                    [90m# User_Test.click_search_button()[0m
+    [32mThen [0m[32mSearch results should be displayed[0m                    [90m# User_Test.search_results_should_be_displayed()[0m
+    [32mAnd [0m[32mValidate search results are from the selected country.[0m [90m# User_Test.validate_search_results_are_from_the_selected_country()[0m
+
+  @Users
+  Scenario Outline: Application should be able to search users [90m# (2)User.feature:31[0m
+    [32mGiven [0m[32mApplication user is on  search user page[0m             [90m# User_Test.application_user_is_on_search_user_page()[0m
+    [32mWhen [0m[32mSelect "[0m[32m[1mIreland[0m[32m" from the Country drop down[0m           [90m# User_Test.select_from_the_Country_drop_down(String)[0m
+    [32mAnd [0m[32mClick search button[0m                                    [90m# User_Test.click_search_button()[0m
+    [32mThen [0m[32mSearch results should be displayed[0m                    [90m# User_Test.search_results_should_be_displayed()[0m
+    [32mAnd [0m[32mValidate search results are from the selected country.[0m [90m# User_Test.validate_search_results_are_from_the_selected_country()[0m
+
+  #Creating a New User:
+  Scenario Outline: Create user and validate with Database that user got created                                    [90m# (2)User.feature:34[0m
+    [36mGiven [0m[36mApplication user is on  search user page[0m
+    [36mAnd [0m[36mClick on Add+ button to create new user[0m
+    [36mThen [0m[36mCreate user page appears[0m
+    [36mAnd [0m[36mEnter the "<First Name>","<Last Name>","<Country>","<Address>","<City Name>"and"<Post Code>" of Address Tab[0m
+    [36mAnd [0m[36mSelect "<Contact Details>" with contact "<Value>" of Contact Tab[0m
+    [36mAnd [0m[36mEnter "<Organisation Name>" and select the "<User Role>" of Roles Tab[0m
+    [36mThen [0m[36mClick on Save Button[0m
+    [36mAnd [0m[36mValidate the created user in the backend[0m
+
+    Examples: 
+
+  @Users
+  Scenario Outline: Create user and validate with Database that user got created                         [90m# (2)User.feature:47[0m
+    [32mGiven [0m[32mApplication user is on  search user page[0m                                                       [90m# User_Test.application_user_is_on_search_user_page()[0m
+    [32mAnd [0m[32mClick on Add+ button to create new user[0m                                                          [90m# User_Test.click_on_Add_button_to_create_new_user()[0m
+    [32mThen [0m[32mCreate user page appears[0m                                                                        [90m# User_Test.create_user_page_appears()[0m
+    [32mAnd [0m[32mEnter the "[0m[32m[1mTest User1[0m[32m","[0m[32m[1mDemo[0m[32m","[0m[32m[1mIndia[0m[32m","[0m[32m[1mTest User Address1[0m[32m","[0m[32m[1mBangalore[0m[32m"and"[0m[32m[1m563210[0m[32m" of Address Tab[0m [90m# User_Test.enter_the_and_of_Address_Tab(String,String,String,String,String,String)[0m
+    [32mAnd [0m[32mSelect "[0m[32m[1mEmail Address[0m[32m" with contact "[0m[32m[1mtest1@mail.com[0m[32m" of Contact Tab[0m                              [90m# User_Test.select_with_contact_of_Contact_Tab(String,String)[0m
+    [32mAnd [0m[32mEnter "[0m[32m[1mIMSTest[0m[32m" and select the "[0m[32m[1mBusiness Contact[0m[32m" of Roles Tab[0m                                   [90m# User_Test.enter_and_select_the_of_Roles_Tab(String,String)[0m
+    [32mThen [0m[32mClick on Save Button[0m                                                                            [90m# User_Test.click_on_Save_Button()[0m
+    [31mAnd [0m[31mValidate the created user in the backend[0m                                                         [90m# User_Test.validate_the_created_user_in_the_backend()[0m
+      [31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".label.label-ims.ng-binding"}
+        (Session info: chrome=54.0.2840.99)
+        (Driver info: chromedriver=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 30.68 seconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+      System info: host: 'BLRW3003539', ip: '10.205.51.164', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\ICHOWD~1\AppData\Local\Temp\scoped_dir8404_11784}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+      Session ID: ec508a0e82349a98344a1be97eed8602
+      *** Element info: {Using=css selector, value=.label.label-ims.ng-binding}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+      	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+      	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+      	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+      	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+      	at com.dca.objects.CreateUser_Page.setGetID(CreateUser_Page.java:177)
+      	at com.dca.stepDefinitions.User_Test.validate_the_created_user_in_the_backend(User_Test.java:109)
+      	at ✽.And Validate the created user in the backend((2)User.feature:42)
+      [0m
+
+  @Users
+  Scenario Outline: Create user and validate with Database that user got created                       [90m# (2)User.feature:48[0m
+    [32mGiven [0m[32mApplication user is on  search user page[0m                                                     [90m# User_Test.application_user_is_on_search_user_page()[0m
+    [31mAnd [0m[31mClick on Add+ button to create new user[0m                                                        [90m# User_Test.click_on_Add_button_to_create_new_user()[0m
+      [31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//translate[text()='Add']"}
+        (Session info: chrome=54.0.2840.99)
+        (Driver info: chromedriver=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 30.03 seconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+      System info: host: 'BLRW3003539', ip: '10.205.51.164', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\ICHOWD~1\AppData\Local\Temp\scoped_dir8404_11784}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+      Session ID: ec508a0e82349a98344a1be97eed8602
+      *** Element info: {Using=xpath, value=//translate[text()='Add']}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+      	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+      	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+      	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+      	at com.sun.proxy.$Proxy18.click(Unknown Source)
+      	at com.dca.objects.User_Page.setAdd_Btn(User_Page.java:79)
+      	at com.dca.stepDefinitions.User_Test.click_on_Add_button_to_create_new_user(User_Test.java:66)
+      	at ✽.And Click on Add+ button to create new user((2)User.feature:36)
+      [0m
+    [36mThen [0m[36mCreate user page appears[0m                                                                      [90m# User_Test.create_user_page_appears()[0m
+    [36mAnd [0m[36mEnter the "[0m[36m[1mTest User2[0m[36m","[0m[36m[1mDemo[0m[36m","[0m[36m[1mJapan[0m[36m","[0m[36m[1mTest User Address2[0m[36m","[0m[36m[1mChennai[0m[36m"and"[0m[36m[1m600028[0m[36m" of Address Tab[0m [90m# User_Test.enter_the_and_of_Address_Tab(String,String,String,String,String,String)[0m
+    [36mAnd [0m[36mSelect "[0m[36m[1mEmail Address[0m[36m" with contact "[0m[36m[1mtest2@mail.com[0m[36m" of Contact Tab[0m                            [90m# User_Test.select_with_contact_of_Contact_Tab(String,String)[0m
+    [36mAnd [0m[36mEnter "[0m[36m[1mAgent Test[0m[36m" and select the "[0m[36m[1mDca Installer[0m[36m" of Roles Tab[0m                                 [90m# User_Test.enter_and_select_the_of_Roles_Tab(String,String)[0m
+    [36mThen [0m[36mClick on Save Button[0m                                                                          [90m# User_Test.click_on_Save_Button()[0m
+    [36mAnd [0m[36mValidate the created user in the backend[0m                                                       [90m# User_Test.validate_the_created_user_in_the_backend()[0m
+
+  @Users
+  Scenario Outline: Create user and validate with Database that user got created                        [90m# (2)User.feature:49[0m
+    [32mGiven [0m[32mApplication user is on  search user page[0m                                                      [90m# User_Test.application_user_is_on_search_user_page()[0m
+    [31mAnd [0m[31mClick on Add+ button to create new user[0m                                                         [90m# User_Test.click_on_Add_button_to_create_new_user()[0m
+      [31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//translate[text()='Add']"}
+        (Session info: chrome=54.0.2840.99)
+        (Driver info: chromedriver=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 30.04 seconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+      System info: host: 'BLRW3003539', ip: '10.205.51.164', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\ICHOWD~1\AppData\Local\Temp\scoped_dir8404_11784}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+      Session ID: ec508a0e82349a98344a1be97eed8602
+      *** Element info: {Using=xpath, value=//translate[text()='Add']}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+      	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+      	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+      	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+      	at com.sun.proxy.$Proxy18.click(Unknown Source)
+      	at com.dca.objects.User_Page.setAdd_Btn(User_Page.java:79)
+      	at com.dca.stepDefinitions.User_Test.click_on_Add_button_to_create_new_user(User_Test.java:66)
+      	at ✽.And Click on Add+ button to create new user((2)User.feature:36)
+      [0m
+    [36mThen [0m[36mCreate user page appears[0m                                                                       [90m# User_Test.create_user_page_appears()[0m
+    [36mAnd [0m[36mEnter the "[0m[36m[1mTest User3[0m[36m","[0m[36m[1mDemo[0m[36m","[0m[36m[1mIreland[0m[36m","[0m[36m[1mTest User Address3[0m[36m","[0m[36m[1mMysore[0m[36m"and"[0m[36m[1m568746[0m[36m" of Address Tab[0m [90m# User_Test.enter_the_and_of_Address_Tab(String,String,String,String,String,String)[0m
+    [36mAnd [0m[36mSelect "[0m[36m[1mEmail Address[0m[36m" with contact "[0m[36m[1mtest3@mail.com[0m[36m" of Contact Tab[0m                             [90m# User_Test.select_with_contact_of_Contact_Tab(String,String)[0m
+    [36mAnd [0m[36mEnter "[0m[36m[1mIMSTest[0m[36m" and select the "[0m[36m[1mBusiness Contact[0m[36m" of Roles Tab[0m                                  [90m# User_Test.enter_and_select_the_of_Roles_Tab(String,String)[0m
+    [36mThen [0m[36mClick on Save Button[0m                                                                           [90m# User_Test.click_on_Save_Button()[0m
+    [36mAnd [0m[36mValidate the created user in the backend[0m                                                        [90m# User_Test.validate_the_created_user_in_the_backend()[0m
+@Organisation
+Feature: Organisation search validation and creating a new Organisation
+  Searching an Organisation for a specific country and adding a new Organisation and
+  Modifying the newly created Organisation by creating Data Transfer
+
+  #Login:
+  Scenario: Verifying User Login with Valid Credentials [90m# (3)Organisation.feature:7[0m
+    [32mGiven [0m[32mUser Navigates to IMSHealth Login Page[0m        [90m# Login_Test.userNavigatesToIMSLoginPage()[0m
+    [32mWhen [0m[32mUser Enters valid username and password[0m        [90m# Login_Test.userEnterValidUNandPWD()[0m
+    [32mAnd [0m[32mClick sign-in[0m                                   [90m# Login_Test.userClicksOnSigninButton()[0m
+    [32mThen [0m[32mHome page should be displayed[0m                  [90m# Login_Test.homePageShouldBeDisplayed()[0m
+
+  #Organisation Page:
+  Scenario: Application  should be able to navigate to Search Organisation Page [90m# (3)Organisation.feature:14[0m
+    [32mGiven [0m[32mUser Navigates to Manage Panel[0m                                        [90m# User_Test.user_Navigates_to_Manage_Panel()[0m
+    [32mAnd [0m[32mClick on Organisation link[0m                                              [90m# Organisation_Test.click_on_Organisation_link()[0m
+    [32mThen [0m[32mOrganisation search screen should be displayed[0m                         [90m# Organisation_Test.organisation_search_screen_should_be_displayed()[0m
+
+  #Organisation Search based on Country:
+  Scenario Outline: Application  should be able to Search Org                         [90m# (3)Organisation.feature:20[0m
+    [36mGiven [0m[36mApplication user is on search Organisation page[0m
+    [36mWhen [0m[36mSelect "<Country>" from the Country drop down[0m
+    [36mAnd [0m[36mClick search button[0m
+    [36mThen [0m[36mSearch results should be displayed[0m
+    [36mAnd [0m[36mValidate search results are from the selected country from the search results[0m
+
+    Examples: 
+
+  @Organisation
+  Scenario Outline: Application  should be able to Search Org                         [90m# (3)Organisation.feature:29[0m
+    [32mGiven [0m[32mApplication user is on search Organisation page[0m                             [90m# Organisation_Test.application_user_is_on_search_Organisation_page()[0m
+    [32mWhen [0m[32mSelect "[0m[32m[1mIreland[0m[32m" from the Country drop down[0m                                  [90m# User_Test.select_from_the_Country_drop_down(String)[0m
+    [32mAnd [0m[32mClick search button[0m                                                           [90m# User_Test.click_search_button()[0m
+    [32mThen [0m[32mSearch results should be displayed[0m                                           [90m# User_Test.search_results_should_be_displayed()[0m
+    [32mAnd [0m[32mValidate search results are from the selected country from the search results[0m [90m# Organisation_Test.validate_search_results_are_from_the_selected_country_from_the_search_results()[0m
+
+  @Organisation
+  Scenario Outline: Application  should be able to Search Org                         [90m# (3)Organisation.feature:30[0m
+    [32mGiven [0m[32mApplication user is on search Organisation page[0m                             [90m# Organisation_Test.application_user_is_on_search_Organisation_page()[0m
+    [32mWhen [0m[32mSelect "[0m[32m[1mJapan[0m[32m" from the Country drop down[0m                                    [90m# User_Test.select_from_the_Country_drop_down(String)[0m
+    [32mAnd [0m[32mClick search button[0m                                                           [90m# User_Test.click_search_button()[0m
+    [32mThen [0m[32mSearch results should be displayed[0m                                           [90m# User_Test.search_results_should_be_displayed()[0m
+    [32mAnd [0m[32mValidate search results are from the selected country from the search results[0m [90m# Organisation_Test.validate_search_results_are_from_the_selected_country_from_the_search_results()[0m
+
+  #Creating new Organisation:
+  Scenario Outline: Creating a new organisation by adding basic details                 [90m# (3)Organisation.feature:33[0m
+    [36mGiven [0m[36mApplication User is on the Organisation page[0m
+    [36mAnd [0m[36mClick on Add+ button to create new organisation[0m
+    [36mThen [0m[36mUser selects "<Organisation Type>"[0m
+    [36mAnd [0m[36muser types in the "<Name>"[0m
+    [36mAnd [0m[36mselects the "<Status>" dropdown[0m
+    [36mWhen [0m[36muser selects the Contact Details tab[0m
+    [36mThen [0m[36muser clicks the Add Contact Details button[0m
+    [36mAnd [0m[36muser selects the "<Contact Details Type>" dropdown[0m
+    [36mAnd [0m[36muser adds a "<Value>"[0m
+    [36mAnd [0m[36mclick the add button[0m
+    [36mThen [0m[36muser select an "<Identifier>" and enter the value[0m
+    [36mWhen [0m[36mUser navigate to Address tab[0m
+    [36mAnd [0m[36mClick Add address button[0m
+    [36mAnd [0m[36muser select "<Country>"[0m
+    [36mAnd [0m[36menter "<Address>","<City Name>" and "<Zip Code>"[0m
+    [36mAnd [0m[36mSelect "<Location Status>"[0m
+    [36mAnd [0m[36mCheck Primary Address checkbox[0m
+    [36mAnd [0m[36mclick Add button[0m
+    [36mThen [0m[36mSave organization[0m
+    [36mAnd [0m[36mValidate the created organisation in the backend for newly created Organisation[0m
+
+    Examples: 
+
+  @Organisation
+  Scenario Outline: Creating a new organisation by adding basic details                 [90m# (3)Organisation.feature:59[0m
+    [32mGiven [0m[32mApplication User is on the Organisation page[0m                                  [90m# Organisation_Test.application_User_is_on_the_Organisation_page()[0m
+    [32mAnd [0m[32mClick on Add+ button to create new organisation[0m                                 [90m# Organisation_Test.click_on_Add_button_to_create_new_organisation()[0m
+    [32mThen [0m[32mUser selects "[0m[32m[1mIms Health[0m[32m"[0m                                                      [90m# Organisation_Test.user_selects(String)[0m
+    [32mAnd [0m[32muser types in the "[0m[32m[1mTest Organisation -1[0m[32m"[0m                                        [90m# Organisation_Test.user_types_in_the(String)[0m
+    [32mAnd [0m[32mselects the "[0m[32m[1mActive[0m[32m" dropdown[0m                                                   [90m# Organisation_Test.selects_the_dropdown(String)[0m
+    [32mWhen [0m[32muser selects the Contact Details tab[0m                                           [90m# Organisation_Test.user_selects_the_Contact_Details_tab()[0m
+    [32mThen [0m[32muser clicks the Add Contact Details button[0m                                     [90m# Organisation_Test.user_clicks_the_Add_Contact_Details_button()[0m
+    [32mAnd [0m[32muser selects the "[0m[32m[1mEmail Address[0m[32m" dropdown[0m                                       [90m# Organisation_Test.user_selects_the_dropdown(String)[0m
+    [32mAnd [0m[32muser adds a "[0m[32m[1mtest1@mail.com[0m[32m"[0m                                                    [90m# Organisation_Test.user_adds_a(String)[0m
+    [32mAnd [0m[32mclick the add button[0m                                                            [90m# Organisation_Test.click_the_add_button()[0m
+    [32mThen [0m[32muser select an "[0m[32m[1mTest Identifier-1[0m[32m" and enter the value[0m                         [90m# Organisation_Test.user_select_an_and_enter_the_value(String)[0m
+    [32mWhen [0m[32mUser navigate to Address tab[0m                                                   [90m# Organisation_Test.user_navigate_to_Address_tab()[0m
+    [32mAnd [0m[32mClick Add address button[0m                                                        [90m# Organisation_Test.click_Add_address_button()[0m
+    [32mAnd [0m[32muser select "[0m[32m[1mIndia[0m[32m"[0m                                                             [90m# Organisation_Test.selectcountry(String)[0m
+    [32mAnd [0m[32menter "[0m[32m[1mTest Address-1[0m[32m","[0m[32m[1mBangalore[0m[32m" and "[0m[32m[1m564231[0m[32m"[0m                                 [90m# Organisation_Test.enter_and(String,String,String)[0m
+    [32mAnd [0m[32mSelect "[0m[32m[1mActive[0m[32m"[0m                                                                 [90m# Organisation_Test.select(String)[0m
+    [32mAnd [0m[32mCheck Primary Address checkbox[0m                                                  [90m# Organisation_Test.check_Primary_Address_checkbox()[0m
+    [32mAnd [0m[32mclick Add button[0m                                                                [90m# Organisation_Test.click_Add_button()[0m
+    [32mThen [0m[32mSave organization[0m                                                              [90m# Organisation_Test.save_organization()[0m
+    [31mAnd [0m[31mValidate the created organisation in the backend for newly created Organisation[0m [90m# Organisation_Test.validate_the_created_user_in_the_backend_for_newly_created_Organisation()[0m
+      [31mjava.lang.ClassNotFoundException: oracle.jdbc.driver.OracleDriver
+      	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+      	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+      	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+      	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+      	at java.lang.Class.forName0(Native Method)
+      	at java.lang.Class.forName(Class.java:264)
+      	at com.dca.objects.Organisation_Page.Oracle_Org_Validation(Organisation_Page.java:275)
+      	at com.dca.stepDefinitions.Organisation_Test.validate_the_created_user_in_the_backend_for_newly_created_Organisation(Organisation_Test.java:147)
+      	at ✽.And Validate the created organisation in the backend for newly created Organisation((3)Organisation.feature:55)
+      [0m
+
+  @Organisation
+  Scenario Outline: Creating a new organisation by adding basic details                 [90m# (3)Organisation.feature:60[0m
+    [32mGiven [0m[32mApplication User is on the Organisation page[0m                                  [90m# Organisation_Test.application_User_is_on_the_Organisation_page()[0m
+    [32mAnd [0m[32mClick on Add+ button to create new organisation[0m                                 [90m# Organisation_Test.click_on_Add_button_to_create_new_organisation()[0m
+    [32mThen [0m[32mUser selects "[0m[32m[1mGp Clinic[0m[32m"[0m                                                       [90m# Organisation_Test.user_selects(String)[0m
+    [32mAnd [0m[32muser types in the "[0m[32m[1mTest Organisation -2[0m[32m"[0m                                        [90m# Organisation_Test.user_types_in_the(String)[0m
+    [32mAnd [0m[32mselects the "[0m[32m[1mActive[0m[32m" dropdown[0m                                                   [90m# Organisation_Test.selects_the_dropdown(String)[0m
+    [32mWhen [0m[32muser selects the Contact Details tab[0m                                           [90m# Organisation_Test.user_selects_the_Contact_Details_tab()[0m
+    [32mThen [0m[32muser clicks the Add Contact Details button[0m                                     [90m# Organisation_Test.user_clicks_the_Add_Contact_Details_button()[0m
+    [32mAnd [0m[32muser selects the "[0m[32m[1mEmail Address[0m[32m" dropdown[0m                                       [90m# Organisation_Test.user_selects_the_dropdown(String)[0m
+    [32mAnd [0m[32muser adds a "[0m[32m[1mtest2@mail.com[0m[32m"[0m                                                    [90m# Organisation_Test.user_adds_a(String)[0m
+    [32mAnd [0m[32mclick the add button[0m                                                            [90m# Organisation_Test.click_the_add_button()[0m
+    [32mThen [0m[32muser select an "[0m[32m[1mTest Identifier-2[0m[32m" and enter the value[0m                         [90m# Organisation_Test.user_select_an_and_enter_the_value(String)[0m
+    [32mWhen [0m[32mUser navigate to Address tab[0m                                                   [90m# Organisation_Test.user_navigate_to_Address_tab()[0m
+    [32mAnd [0m[32mClick Add address button[0m                                                        [90m# Organisation_Test.click_Add_address_button()[0m
+    [32mAnd [0m[32muser select "[0m[32m[1mJapan[0m[32m"[0m                                                             [90m# Organisation_Test.selectcountry(String)[0m
+    [32mAnd [0m[32menter "[0m[32m[1mTest Address-2[0m[32m","[0m[32m[1mTokyo[0m[32m" and "[0m[32m[1m600028[0m[32m"[0m                                     [90m# Organisation_Test.enter_and(String,String,String)[0m
+    [32mAnd [0m[32mSelect "[0m[32m[1mActive[0m[32m"[0m                                                                 [90m# Organisation_Test.select(String)[0m
+    [32mAnd [0m[32mCheck Primary Address checkbox[0m                                                  [90m# Organisation_Test.check_Primary_Address_checkbox()[0m
+    [32mAnd [0m[32mclick Add button[0m                                                                [90m# Organisation_Test.click_Add_button()[0m
+    [32mThen [0m[32mSave organization[0m                                                              [90m# Organisation_Test.save_organization()[0m
+    [31mAnd [0m[31mValidate the created organisation in the backend for newly created Organisation[0m [90m# Organisation_Test.validate_the_created_user_in_the_backend_for_newly_created_Organisation()[0m
+      [31mjava.lang.ClassNotFoundException: oracle.jdbc.driver.OracleDriver
+      	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+      	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+      	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+      	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+      	at java.lang.Class.forName0(Native Method)
+      	at java.lang.Class.forName(Class.java:264)
+      	at com.dca.objects.Organisation_Page.Oracle_Org_Validation(Organisation_Page.java:275)
+      	at com.dca.stepDefinitions.Organisation_Test.validate_the_created_user_in_the_backend_for_newly_created_Organisation(Organisation_Test.java:147)
+      	at ✽.And Validate the created organisation in the backend for newly created Organisation((3)Organisation.feature:55)
+      [0m
+
+  #Data Transfer:
+  Scenario Outline: Modify the newly created organisation                                                     [90m# (3)Organisation.feature:64[0m
+    [36mGiven [0m[36mUser is on Search Organization page[0m
+    [36mAnd [0m[36muser select Modify option from Action[0m
+    [36mThen [0m[36mModify Org Page should display[0m
+    [36mGiven [0m[36muser selects the Data Transfer tab[0m
+    [36mThen [0m[36mselect "<Data Domain>" and "<Panel Status>" from the dropdown[0m
+    [36mAnd [0m[36mClick on Add button[0m
+    [36mThen [0m[36mSelected data domain and Panel Status should be displayed in table[0m
+    [36mGiven [0m[36muser is able to see newly created domain and Panel status in the table[0m
+    [36mThen [0m[36mselect "<Domain with associated Panel Status>" from the dropdown[0m
+    [36mAnd [0m[36mselect "<Data Type>"[0m
+    [36mThen [0m[36mclick start configuration button[0m
+    [36mThen [0m[36mOrganization / Add Data Transfer Configuration page should be displayed[0m
+    [36mGiven [0m[36mUser is on Organization / Add Data Transfer Configuration page General setting page[0m
+    [36mAnd [0m[36mData Domain ,Panel status and Data type fields are prepopulated[0m
+    [36mThen [0m[36muser types "<Data Owner>" in data owner name and select one of the suggestion[0m
+    [36mAnd [0m[36mselect "<Data Collection Method>" and "<Transfer Direction>" from the drop down[0m
+    [36mAnd [0m[36mselect "<Start Date>" from the Transfer schedule text box[0m
+    [36mAnd [0m[36mselect schedule from the "<Transfer Schedule Type>" drop down.[0m
+    [36mGiven [0m[36muser is able to navigate to File transfer details tab[0m
+    [36mThen [0m[36mselect "<Primary Transfer Method>" and "<Alternate Method>" from the respective dropdowns[0m
+    [36mThen [0m[36mFTP account drop down should have create new account options[0m
+    [36mAnd [0m[36mselect a FTP Host Provider value from "<FTP Host Provider>" drop down[0m
+    [36mAnd [0m[36mselect a Data Transfer Software value from "<Data Transfer Software>" type dropdown[0m
+    [36mAnd [0m[36mselect a MFT Domain value from "<MFT Domain>" dropdown[0m
+    [36mAnd [0m[36mselect a MFT Country value from "<MFT Country>" dropdown[0m
+    [36mAnd [0m[36mselect a MFT Workflow value from "<MFT Workflow>" drop down[0m
+    [36mThen [0m[36mvalidate File transfer host name preopulated as mft.imshealth.com[0m
+    [36mAnd [0m[36mselect a FTP Type value from "<FTP Type>" drop down[0m
+    [36mAnd [0m[36mvalidate * Input directory path prepopulated as /in[0m
+    [36mAnd [0m[36mvalidate Output directory path prepopulated as /out[0m
+    [36mAnd [0m[36mClick on Alternate Transfer method –Email[0m
+    [36mThen [0m[36menter "<Email Address>" in email address text filed[0m
+    [36mAnd [0m[36menter again "<Confirm Email Address>" in email address confirmation field.[0m
+    [36mGiven [0m[36muser is able to navigate to File Specification tab[0m
+    [36mAnd [0m[36mselect a Specification Template value from "<Specification Template>" dropdown[0m
+    [36mAnd [0m[36mCheck File encryption check box[0m
+    [36mAnd [0m[36mselect a Encrypted value from "<Encrypted by>" drop down[0m
+    [36mThen [0m[36mGenerate Encryption keypair check box should be displayed[0m
+    [36mGiven [0m[36muser is able to navigate to Activation Details tab[0m
+    [36mThen [0m[36mselect Activate Immediate check box[0m
+    [36mAnd [0m[36muncheck no end date check box[0m
+    [36mThen [0m[36menter the "<Activation End Date>"[0m
+    [36mAnd [0m[36mclick on Save button[0m
+    [36mThen [0m[36mdata transfer successfully created message should be displayed and user navigate to modify org page.[0m
+    [36mGiven [0m[36muser is on Modify org page[0m
+    [36mAnd [0m[36mclick on Data Transfer tab[0m
+    [36mThen [0m[36mlist of data transfer should be displayed and status as Active.[0m
+
+    Examples: 
+
+  @Organisation
+  Scenario Outline: Modify the newly created organisation                                                     [90m# (3)Organisation.feature:122[0m
+    [32mGiven [0m[32mUser is on Search Organization page[0m                                                                 [90m# DataTransfer_Test.user_is_on_Search_Organization_page()[0m
+    [32mAnd [0m[32muser select Modify option from Action[0m                                                                 [90m# DataTransfer_Test.user_select_Modify_option_from_Action()[0m
+    [32mThen [0m[32mModify Org Page should display[0m                                                                       [90m# DataTransfer_Test.modify_Org_Page_should_display()[0m
+    [32mGiven [0m[32muser selects the Data Transfer tab[0m                                                                  [90m# DataTransfer_Test.user_selects_the_Data_Transfer_tab()[0m
+    [32mThen [0m[32mselect "[0m[32m[1mClaims[0m[32m" and "[0m[32m[1mACTIVE[0m[32m" from the dropdown[0m                                                       [90m# DataTransfer_Test.select_and_from_the_dropdown(String,String)[0m
+    [32mAnd [0m[32mClick on Add button[0m                                                                                   [90m# DataTransfer_Test.click_on_Add_button()[0m
+    [32mThen [0m[32mSelected data domain and Panel Status should be displayed in table[0m                                   [90m# DataTransfer_Test.select_data_domain_and_Panel_Status_should_be_displayed_in_table()[0m
+    [32mGiven [0m[32muser is able to see newly created domain and Panel status in the table[0m                              [90m# DataTransfer_Test.user_is_able_to_see_newly_created_domain_and_Panel_status_in_the_table()[0m
+    [32mThen [0m[32mselect "[0m[32m[1mClaims - ACTIVE[0m[32m" from the dropdown[0m                                                           [90m# DataTransfer_Test.select_from_the_dropdown(String)[0m
+    [32mAnd [0m[32mselect "[0m[32m[1mPatient[0m[32m"[0m                                                                                      [90m# DataTransfer_Test.select(String)[0m
+    [32mThen [0m[32mclick start configuration button[0m                                                                     [90m# DataTransfer_Test.click_start_configuration_button()[0m
+    [32mThen [0m[32mOrganization / Add Data Transfer Configuration page should be displayed[0m                              [90m# DataTransfer_Test.organization_Add_Data_Transfer_Configuration_page_should_be_displayed()[0m
+    [32mGiven [0m[32mUser is on Organization / Add Data Transfer Configuration page General setting page[0m                 [90m# DataTransfer_Test.user_is_on_Organization_Add_Data_Transfer_Configuration_page_General_setting_page()[0m
+    [32mAnd [0m[32mData Domain ,Panel status and Data type fields are prepopulated[0m                                       [90m# DataTransfer_Test.data_Domain_Panel_status_and_Data_type_fields_are_prepopulated()[0m
+    [31mThen [0m[31muser types "[0m[31m[1mMahendra[0m[31m" in data owner name and select one of the suggestion[0m                            [90m# DataTransfer_Test.user_types_in_data_owner_name_and_select_one_of_the_suggestion(String)[0m
+      [31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"dataOwner"}
+        (Session info: chrome=54.0.2840.99)
+        (Driver info: chromedriver=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 30.06 seconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+      System info: host: 'BLRW3003539', ip: '10.205.51.164', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\ICHOWD~1\AppData\Local\Temp\scoped_dir8404_11784}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+      Session ID: ec508a0e82349a98344a1be97eed8602
+      *** Element info: {Using=name, value=dataOwner}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:461)
+      	at org.openqa.selenium.By$ByName.findElement(By.java:303)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+      	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+      	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+      	at com.sun.proxy.$Proxy18.sendKeys(Unknown Source)
+      	at com.dca.objects.DataTransfer_Page.setDataOwnerBox(DataTransfer_Page.java:188)
+      	at com.dca.stepDefinitions.DataTransfer_Test.user_types_in_data_owner_name_and_select_one_of_the_suggestion(DataTransfer_Test.java:99)
+      	at ✽.Then user types "Mahendra" in data owner name and select one of the suggestion((3)Organisation.feature:82)
+      [0m
+    [36mAnd [0m[36mselect "[0m[36m[1mDirect[0m[36m" and "[0m[36m[1mTo IMS[0m[36m" from the drop down[0m                                                       [90m# DataTransfer_Test.select_and_from_the_drop_down(String,String)[0m
+    [36mAnd [0m[36mselect "[0m[36m[1m2016-11-03[0m[36m" from the Transfer schedule text box[0m                                               [90m# DataTransfer_Test.select_from_the_Transfer_schedule_text_box(String)[0m
+    [36mAnd [0m[36mselect schedule from the "[0m[36m[1mDaily[0m[36m" drop down.[0m                                                           [90m# DataTransfer_Test.select_schedule_from_the_drop_down(String)[0m
+    [36mGiven [0m[36muser is able to navigate to File transfer details tab[0m                                               [90m# DataTransfer_Test.user_is_able_to_navigate_to_File_transfer_details_tab()[0m
+    [36mThen [0m[36mselect "[0m[36m[1mFile transfer[0m[36m" and "[0m[36m[1mEmail[0m[36m" from the respective dropdowns[0m                                     [90m# DataTransfer_Test.select_and_from_the_respective_dropdowns(String,String)[0m
+    [36mThen [0m[36mFTP account drop down should have create new account options[0m                                         [90m# DataTransfer_Test.ftp_account_drop_down_should_have_create_new_account_options()[0m
+    [36mAnd [0m[36mselect a FTP Host Provider value from "[0m[36m[1mIMS DCP[0m[36m" drop down[0m                                             [90m# DataTransfer_Test.select_a_value_from_drop_down(String)[0m
+    [36mAnd [0m[36mselect a Data Transfer Software value from "[0m[36m[1mData collection agent[0m[36m" type dropdown[0m                      [90m# DataTransfer_Test.select_a_value_from_type_dropdown(String)[0m
+    [36mAnd [0m[36mselect a MFT Domain value from "[0m[36m[1mCarlstadt GDC Internal[0m[36m" dropdown[0m                                      [90m# DataTransfer_Test.select_a_mft_value_from_type_dropdown(String)[0m
+    [36mAnd [0m[36mselect a MFT Country value from "[0m[36m[1mInternal Test[0m[36m" dropdown[0m                                              [90m# DataTransfer_Test.select_a_MFT_Country_value_from_dropdown(String)[0m
+    [36mAnd [0m[36mselect a MFT Workflow value from "[0m[36m[1m_nopflowXT[0m[36m" drop down[0m                                               [90m# DataTransfer_Test.select_a_MFT_Workflow_value_from_drop_down(String)[0m
+    [36mThen [0m[36mvalidate File transfer host name preopulated as mft.imshealth.com[0m                                    [90m# DataTransfer_Test.validate_File_transfer_host_name_preopulated_as_mft_imshealth_com()[0m
+    [36mAnd [0m[36mselect a FTP Type value from "[0m[36m[1mFTP[0m[36m" drop down[0m                                                          [90m# DataTransfer_Test.select_a_FTP_Type_value_from_drop_down(String)[0m
+    [36mAnd [0m[36mvalidate * Input directory path prepopulated as /in[0m                                                   [90m# DataTransfer_Test.validate_Input_directory_path_prepopulated_as_in()[0m
+    [36mAnd [0m[36mvalidate Output directory path prepopulated as /out[0m                                                   [90m# DataTransfer_Test.validate_Output_directory_path_prepopulated_as_out()[0m
+    [36mAnd [0m[36mClick on Alternate Transfer method –Email[0m                                                             [90m# DataTransfer_Test.click_on_Alternate_Transfer_method_Email()[0m
+    [36mThen [0m[36menter "[0m[36m[1mtest1@mail.com[0m[36m" in email address text filed[0m                                                   [90m# DataTransfer_Test.enter_in_email_address_text_filed(String)[0m
+    [36mAnd [0m[36menter again "[0m[36m[1mtest1@mail.com[0m[36m" in email address confirmation field.[0m                                     [90m# DataTransfer_Test.enter_again_in_email_address_confirmation_field(String)[0m
+    [36mGiven [0m[36muser is able to navigate to File Specification tab[0m                                                  [90m# DataTransfer_Test.user_is_able_to_navigate_to_File_Specification_tab()[0m
+    [36mAnd [0m[36mselect a Specification Template value from "[0m[36m[1mGlobal SIN INV IND[0m[36m" dropdown[0m                              [90m# DataTransfer_Test.select_a_Specification_Template_value_from_dropdown(String)[0m
+    [36mAnd [0m[36mCheck File encryption check box[0m                                                                       [90m# DataTransfer_Test.check_File_encryption_check_box()[0m
+    [36mAnd [0m[36mselect a Encrypted value from "[0m[36m[1mIMS DCP[0m[36m" drop down[0m                                                     [90m# DataTransfer_Test.select_a_Encrypted_value_from_drop_down(String)[0m
+    [36mThen [0m[36mGenerate Encryption keypair check box should be displayed[0m                                            [90m# DataTransfer_Test.generate_Encryption_keypair_check_box_should_be_displayed()[0m
+    [36mGiven [0m[36muser is able to navigate to Activation Details tab[0m                                                  [90m# DataTransfer_Test.user_is_able_to_navigate_to_Activation_Details_tab()[0m
+    [36mThen [0m[36mselect Activate Immediate check box[0m                                                                  [90m# DataTransfer_Test.select_Activate_Immediate_check_box()[0m
+    [36mAnd [0m[36muncheck no end date check box[0m                                                                         [90m# DataTransfer_Test.uncheck_no_end_date_check_box()[0m
+    [36mThen [0m[36menter the "[0m[36m[1m2016-11-18[0m[36m"[0m                                                                               [90m# DataTransfer_Test.enter_the(String)[0m
+    [36mAnd [0m[36mclick on Save button[0m                                                                                  [90m# DataTransfer_Test.click_on_Save_button()[0m
+    [36mThen [0m[36mdata transfer successfully created message should be displayed and user navigate to modify org page.[0m [90m# DataTransfer_Test.data_transfer_successfully_created_message_should_be_displayed_and_user_navigate_to_modify_org_page()[0m
+    [36mGiven [0m[36muser is on Modify org page[0m                                                                          [90m# DataTransfer_Test.user_is_on_Modify_org_page()[0m
+    [36mAnd [0m[36mclick on Data Transfer tab[0m                                                                            [90m# DataTransfer_Test.click_on_Data_Transfer_tab()[0m
+    [36mThen [0m[36mlist of data transfer should be displayed and status as Active.[0m                                      [90m# DataTransfer_Test.list_of_data_transfer_should_be_displayed_and_status_as_Active()[0m

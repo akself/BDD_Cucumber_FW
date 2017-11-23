@@ -1,0 +1,16 @@
+com\dca\objects\DataTransfer_Page.class
+com\dca\stepDefinitions\Runner.class
+com\dca\utilities\GetData.class
+com\dca\config\TestConfiguration.class
+com\dca\objects\Organisation_Page.class
+com\dca\stepDefinitions\Organisation_Test.class
+com\dca\stepDefinitions\DataTransfer_Test.class
+com\dca\stepDefinitions\User_Test.class
+com\dca\utilities\SetData.class
+com\dca\objects\CreateUser_Page.class
+com\dca\utilities\Actions.class
+com\dca\objects\Login_Page.class
+com\dca\stepDefinitions\Login_Test.class
+com\dca\objects\Home_Page.class
+com\dca\objects\User_Page.class
+com\dca\utilities\Screenshots.class

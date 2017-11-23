@@ -1,0 +1,16 @@
+[
+  {
+    "line": 2,
+    "name": "User Login Validation",
+    "description": "Validating user login by passing valid credentials",
+    "id": "user-login-validation",
+    "keyword": "Feature",
+    "uri": "(1)Login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Login"
+      }
+    ]
+  }
+]

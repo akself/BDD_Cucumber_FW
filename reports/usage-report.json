@@ -1,0 +1,1260 @@
+[
+  {
+    "source": "^Click on Organisation link$",
+    "steps": [
+      {
+        "name": "Click on Organisation link",
+        "aggregatedDurations": {
+          "average": 2.468761303,
+          "median": 2.468761303
+        },
+        "durations": [
+          {
+            "duration": 2.468761303,
+            "location": "(3)Organisation.feature:16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^click start configuration button$",
+    "steps": [
+      {
+        "name": "click start configuration button",
+        "aggregatedDurations": {
+          "average": 0.089654207,
+          "median": 0.089654207
+        },
+        "durations": [
+          {
+            "duration": 0.089654207,
+            "location": "(3)Organisation.feature:77"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Validate search results are from the selected country\\.$",
+    "steps": [
+      {
+        "name": "Validate search results are from the selected country.",
+        "aggregatedDurations": {
+          "average": 3.383105419,
+          "median": 3.373429608
+        },
+        "durations": [
+          {
+            "duration": 3.426489273,
+            "location": "(2)User.feature:24"
+          },
+          {
+            "duration": 3.373429608,
+            "location": "(2)User.feature:24"
+          },
+          {
+            "duration": 3.349397378,
+            "location": "(2)User.feature:24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Organization / Add Data Transfer Configuration page should be displayed$",
+    "steps": [
+      {
+        "name": "Organization / Add Data Transfer Configuration page should be displayed",
+        "aggregatedDurations": {
+          "average": 0.000077999,
+          "median": 0.000077999
+        },
+        "durations": [
+          {
+            "duration": 0.000077999,
+            "location": "(3)Organisation.feature:78"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Click on Add\\+ button to create new user$",
+    "steps": [
+      {
+        "name": "Click on Add+ button to create new user",
+        "aggregatedDurations": {
+          "average": 1.324400836,
+          "median": 1.324400836
+        },
+        "durations": [
+          {
+            "duration": 1.324400836,
+            "location": "(2)User.feature:36"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Enter the \"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\"and\"([^\"]*)\" of Address Tab$",
+    "steps": [
+      {
+        "name": "Enter the \"Test User1\",\"Demo\",\"India\",\"Test User Address1\",\"Bangalore\"and\"563210\" of Address Tab",
+        "aggregatedDurations": {
+          "average": 1.112091979,
+          "median": 1.112091979
+        },
+        "durations": [
+          {
+            "duration": 1.112091979,
+            "location": "(2)User.feature:38"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Application User is on the Organisation page$",
+    "steps": [
+      {
+        "name": "Application User is on the Organisation page",
+        "aggregatedDurations": {
+          "average": 0.000598743,
+          "median": 0.000598743
+        },
+        "durations": [
+          {
+            "duration": 0.000617421,
+            "location": "(3)Organisation.feature:34"
+          },
+          {
+            "duration": 0.000580065,
+            "location": "(3)Organisation.feature:34"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User Navigates to Manage Panel$",
+    "steps": [
+      {
+        "name": "User Navigates to Manage Panel",
+        "aggregatedDurations": {
+          "average": 1.11525688,
+          "median": 1.11525688
+        },
+        "durations": [
+          {
+            "duration": 1.121104117,
+            "location": "(2)User.feature:14"
+          },
+          {
+            "duration": 1.109409644,
+            "location": "(3)Organisation.feature:15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user selects the Data Transfer tab$",
+    "steps": [
+      {
+        "name": "user selects the Data Transfer tab",
+        "aggregatedDurations": {
+          "average": 1.081196271,
+          "median": 1.081196271
+        },
+        "durations": [
+          {
+            "duration": 1.081196271,
+            "location": "(3)Organisation.feature:69"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user select Modify option from Action$",
+    "steps": [
+      {
+        "name": "user select Modify option from Action",
+        "aggregatedDurations": {
+          "average": 4.713554168,
+          "median": 4.713554168
+        },
+        "durations": [
+          {
+            "duration": 4.713554168,
+            "location": "(3)Organisation.feature:66"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user is able to see newly created domain and Panel status in the table$",
+    "steps": [
+      {
+        "name": "user is able to see newly created domain and Panel status in the table",
+        "aggregatedDurations": {
+          "average": 0.000058705,
+          "median": 0.000058705
+        },
+        "durations": [
+          {
+            "duration": 0.000058705,
+            "location": "(3)Organisation.feature:74"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User Navigates to IMSHealth Login Page$",
+    "steps": [
+      {
+        "name": "User Navigates to IMSHealth Login Page",
+        "aggregatedDurations": {
+          "average": 4.478067098,
+          "median": 0.097654824
+        },
+        "durations": [
+          {
+            "duration": 13.280300763,
+            "location": "(1)Login.feature:7"
+          },
+          {
+            "duration": 0.056245707,
+            "location": "(2)User.feature:7"
+          },
+          {
+            "duration": 0.097654824,
+            "location": "(3)Organisation.feature:8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User Enters valid username and password$",
+    "steps": [
+      {
+        "name": "User Enters valid username and password",
+        "aggregatedDurations": {
+          "average": 0.601056595,
+          "median": 0.523919543
+        },
+        "durations": [
+          {
+            "duration": 0.792166218,
+            "location": "(1)Login.feature:8"
+          },
+          {
+            "duration": 0.523919543,
+            "location": "(2)User.feature:8"
+          },
+          {
+            "duration": 0.487084026,
+            "location": "(3)Organisation.feature:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Click Add address button$",
+    "steps": [
+      {
+        "name": "Click Add address button",
+        "aggregatedDurations": {
+          "average": 1.644546431,
+          "median": 1.644546431
+        },
+        "durations": [
+          {
+            "duration": 1.66606074,
+            "location": "(3)Organisation.feature:48"
+          },
+          {
+            "duration": 1.623032122,
+            "location": "(3)Organisation.feature:48"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User clicks on User link$",
+    "steps": [
+      {
+        "name": "User clicks on User link",
+        "aggregatedDurations": {
+          "average": 2.537139917,
+          "median": 2.537139917
+        },
+        "durations": [
+          {
+            "duration": 2.537139917,
+            "location": "(2)User.feature:15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user select an \"([^\"]*)\" and enter the value$",
+    "steps": [
+      {
+        "name": "user select an \"Test Identifier-1\" and enter the value",
+        "aggregatedDurations": {
+          "average": 3.3036191,
+          "median": 3.3036191
+        },
+        "durations": [
+          {
+            "duration": 3.3036191,
+            "location": "(3)Organisation.feature:45"
+          }
+        ]
+      },
+      {
+        "name": "user select an \"Test Identifier-2\" and enter the value",
+        "aggregatedDurations": {
+          "average": 3.236227785,
+          "median": 3.236227785
+        },
+        "durations": [
+          {
+            "duration": 3.236227785,
+            "location": "(3)Organisation.feature:45"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Selected data domain and Panel Status should be displayed in table$",
+    "steps": [
+      {
+        "name": "Selected data domain and Panel Status should be displayed in table",
+        "aggregatedDurations": {
+          "average": 0.000091546,
+          "median": 0.000091546
+        },
+        "durations": [
+          {
+            "duration": 0.000091546,
+            "location": "(3)Organisation.feature:72"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Data Domain ,Panel status and Data type fields are prepopulated$",
+    "steps": [
+      {
+        "name": "Data Domain ,Panel status and Data type fields are prepopulated",
+        "aggregatedDurations": {
+          "average": 0.000068967,
+          "median": 0.000068967
+        },
+        "durations": [
+          {
+            "duration": 0.000068967,
+            "location": "(3)Organisation.feature:81"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Click on Add\\+ button to create new organisation$",
+    "steps": [
+      {
+        "name": "Click on Add+ button to create new organisation",
+        "aggregatedDurations": {
+          "average": 0.150208318,
+          "median": 0.150208318
+        },
+        "durations": [
+          {
+            "duration": 0.069964043,
+            "location": "(3)Organisation.feature:35"
+          },
+          {
+            "duration": 0.230452594,
+            "location": "(3)Organisation.feature:35"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^enter \"([^\"]*)\",\"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "enter \"Test Address-1\",\"Bangalore\" and \"564231\"",
+        "aggregatedDurations": {
+          "average": 0.494485284,
+          "median": 0.494485284
+        },
+        "durations": [
+          {
+            "duration": 0.494485284,
+            "location": "(3)Organisation.feature:50"
+          }
+        ]
+      },
+      {
+        "name": "enter \"Test Address-2\",\"Tokyo\" and \"600028\"",
+        "aggregatedDurations": {
+          "average": 0.425280703,
+          "median": 0.425280703
+        },
+        "durations": [
+          {
+            "duration": 0.425280703,
+            "location": "(3)Organisation.feature:50"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Check Primary Address checkbox$",
+    "steps": [
+      {
+        "name": "Check Primary Address checkbox",
+        "aggregatedDurations": {
+          "average": 0.095709577,
+          "median": 0.095709577
+        },
+        "durations": [
+          {
+            "duration": 0.091767152,
+            "location": "(3)Organisation.feature:52"
+          },
+          {
+            "duration": 0.099652002,
+            "location": "(3)Organisation.feature:52"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Validate search results are from the selected country from the search results$",
+    "steps": [
+      {
+        "name": "Validate search results are from the selected country from the search results",
+        "aggregatedDurations": {
+          "average": 2.043820714,
+          "median": 2.043820714
+        },
+        "durations": [
+          {
+            "duration": 2.051315366,
+            "location": "(3)Organisation.feature:25"
+          },
+          {
+            "duration": 2.036326063,
+            "location": "(3)Organisation.feature:25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^select \"([^\"]*)\" and \"([^\"]*)\" from the dropdown$",
+    "steps": [
+      {
+        "name": "select \"Claims\" and \"ACTIVE\" from the dropdown",
+        "aggregatedDurations": {
+          "average": 0.338975105,
+          "median": 0.338975105
+        },
+        "durations": [
+          {
+            "duration": 0.338975105,
+            "location": "(3)Organisation.feature:70"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^select \"([^\"]*)\" from the dropdown$",
+    "steps": [
+      {
+        "name": "select \"Claims - ACTIVE\" from the dropdown",
+        "aggregatedDurations": {
+          "average": 0.149970627,
+          "median": 0.149970627
+        },
+        "durations": [
+          {
+            "duration": 0.149970627,
+            "location": "(3)Organisation.feature:75"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Select \"([^\"]*)\" from the Country drop down$",
+    "steps": [
+      {
+        "name": "Select \"India\" from the Country drop down",
+        "aggregatedDurations": {
+          "average": 0.195013664,
+          "median": 0.195013664
+        },
+        "durations": [
+          {
+            "duration": 0.195013664,
+            "location": "(2)User.feature:21"
+          }
+        ]
+      },
+      {
+        "name": "Select \"Japan\" from the Country drop down",
+        "aggregatedDurations": {
+          "average": 0.13894838,
+          "median": 0.13894838
+        },
+        "durations": [
+          {
+            "duration": 0.14159069,
+            "location": "(2)User.feature:21"
+          },
+          {
+            "duration": 0.13630607,
+            "location": "(3)Organisation.feature:22"
+          }
+        ]
+      },
+      {
+        "name": "Select \"Ireland\" from the Country drop down",
+        "aggregatedDurations": {
+          "average": 0.161970937,
+          "median": 0.161970937
+        },
+        "durations": [
+          {
+            "duration": 0.170243319,
+            "location": "(2)User.feature:21"
+          },
+          {
+            "duration": 0.153698556,
+            "location": "(3)Organisation.feature:22"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User search screen should be displayed$",
+    "steps": [
+      {
+        "name": "User search screen should be displayed",
+        "aggregatedDurations": {
+          "average": 1.06080576,
+          "median": 1.06080576
+        },
+        "durations": [
+          {
+            "duration": 1.06080576,
+            "location": "(2)User.feature:16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User navigate to Address tab$",
+    "steps": [
+      {
+        "name": "User navigate to Address tab",
+        "aggregatedDurations": {
+          "average": 0.084085918,
+          "median": 0.084085918
+        },
+        "durations": [
+          {
+            "duration": 0.090835272,
+            "location": "(3)Organisation.feature:47"
+          },
+          {
+            "duration": 0.077336565,
+            "location": "(3)Organisation.feature:47"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Click on Save Button$",
+    "steps": [
+      {
+        "name": "Click on Save Button",
+        "aggregatedDurations": {
+          "average": 0.574282915,
+          "median": 0.574282915
+        },
+        "durations": [
+          {
+            "duration": 0.574282915,
+            "location": "(2)User.feature:41"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Create user page appears$",
+    "steps": [
+      {
+        "name": "Create user page appears",
+        "aggregatedDurations": {
+          "average": 0.05200504,
+          "median": 0.05200504
+        },
+        "durations": [
+          {
+            "duration": 0.05200504,
+            "location": "(2)User.feature:37"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user adds a \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user adds a \"test1@mail.com\"",
+        "aggregatedDurations": {
+          "average": 0.152770782,
+          "median": 0.152770782
+        },
+        "durations": [
+          {
+            "duration": 0.152770782,
+            "location": "(3)Organisation.feature:43"
+          }
+        ]
+      },
+      {
+        "name": "user adds a \"test2@mail.com\"",
+        "aggregatedDurations": {
+          "average": 0.127695421,
+          "median": 0.127695421
+        },
+        "durations": [
+          {
+            "duration": 0.127695421,
+            "location": "(3)Organisation.feature:43"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Click sign-in$",
+    "steps": [
+      {
+        "name": "Click sign-in",
+        "aggregatedDurations": {
+          "average": 3.25733903,
+          "median": 2.70136584
+        },
+        "durations": [
+          {
+            "duration": 2.558352289,
+            "location": "(1)Login.feature:9"
+          },
+          {
+            "duration": 2.70136584,
+            "location": "(2)User.feature:9"
+          },
+          {
+            "duration": 4.512298963,
+            "location": "(3)Organisation.feature:10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Select \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "Select \"Active\"",
+        "aggregatedDurations": {
+          "average": 0.193592035,
+          "median": 0.193592035
+        },
+        "durations": [
+          {
+            "duration": 0.219516761,
+            "location": "(3)Organisation.feature:51"
+          },
+          {
+            "duration": 0.167667309,
+            "location": "(3)Organisation.feature:51"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Modify Org Page should display$",
+    "steps": [
+      {
+        "name": "Modify Org Page should display",
+        "aggregatedDurations": {
+          "average": 0.624702937,
+          "median": 0.624702937
+        },
+        "durations": [
+          {
+            "duration": 0.624702937,
+            "location": "(3)Organisation.feature:67"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Search results should be displayed$",
+    "steps": [
+      {
+        "name": "Search results should be displayed",
+        "aggregatedDurations": {
+          "average": 0.000136867,
+          "median": 0.00009483
+        },
+        "durations": [
+          {
+            "duration": 0.000121925,
+            "location": "(2)User.feature:23"
+          },
+          {
+            "duration": 0.00009483,
+            "location": "(2)User.feature:23"
+          },
+          {
+            "duration": 0.000073483,
+            "location": "(2)User.feature:23"
+          },
+          {
+            "duration": 0.000302964,
+            "location": "(3)Organisation.feature:24"
+          },
+          {
+            "duration": 0.000091136,
+            "location": "(3)Organisation.feature:24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^click Add button$",
+    "steps": [
+      {
+        "name": "click Add button",
+        "aggregatedDurations": {
+          "average": 0.064871341,
+          "median": 0.064871341
+        },
+        "durations": [
+          {
+            "duration": 0.073498206,
+            "location": "(3)Organisation.feature:53"
+          },
+          {
+            "duration": 0.056244476,
+            "location": "(3)Organisation.feature:53"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Organisation search screen should be displayed$",
+    "steps": [
+      {
+        "name": "Organisation search screen should be displayed",
+        "aggregatedDurations": {
+          "average": 0.000127261,
+          "median": 0.000127261
+        },
+        "durations": [
+          {
+            "duration": 0.000127261,
+            "location": "(3)Organisation.feature:17"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User is on Search Organization page$",
+    "steps": [
+      {
+        "name": "User is on Search Organization page",
+        "aggregatedDurations": {
+          "average": 0.137110689,
+          "median": 0.137110689
+        },
+        "durations": [
+          {
+            "duration": 0.137110689,
+            "location": "(3)Organisation.feature:65"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User is on Organization / Add Data Transfer Configuration page General setting page$",
+    "steps": [
+      {
+        "name": "User is on Organization / Add Data Transfer Configuration page General setting page",
+        "aggregatedDurations": {
+          "average": 0.026294194,
+          "median": 0.026294194
+        },
+        "durations": [
+          {
+            "duration": 0.026294194,
+            "location": "(3)Organisation.feature:80"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^selects the \"([^\"]*)\" dropdown$",
+    "steps": [
+      {
+        "name": "selects the \"Active\" dropdown",
+        "aggregatedDurations": {
+          "average": 0.24050232,
+          "median": 0.24050232
+        },
+        "durations": [
+          {
+            "duration": 0.210836733,
+            "location": "(3)Organisation.feature:38"
+          },
+          {
+            "duration": 0.270167907,
+            "location": "(3)Organisation.feature:38"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^select \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "select \"Patient\"",
+        "aggregatedDurations": {
+          "average": 0.425553288,
+          "median": 0.425553288
+        },
+        "durations": [
+          {
+            "duration": 0.425553288,
+            "location": "(3)Organisation.feature:76"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Click search button$",
+    "steps": [
+      {
+        "name": "Click search button",
+        "aggregatedDurations": {
+          "average": 0.086685247,
+          "median": 0.095295158
+        },
+        "durations": [
+          {
+            "duration": 0.124957665,
+            "location": "(2)User.feature:22"
+          },
+          {
+            "duration": 0.052691018,
+            "location": "(2)User.feature:22"
+          },
+          {
+            "duration": 0.059930943,
+            "location": "(2)User.feature:22"
+          },
+          {
+            "duration": 0.100551451,
+            "location": "(3)Organisation.feature:23"
+          },
+          {
+            "duration": 0.095295158,
+            "location": "(3)Organisation.feature:23"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^click the add button$",
+    "steps": [
+      {
+        "name": "click the add button",
+        "aggregatedDurations": {
+          "average": 0.000029147,
+          "median": 0.000029147
+        },
+        "durations": [
+          {
+            "duration": 0.000029147,
+            "location": "(3)Organisation.feature:44"
+          },
+          {
+            "duration": 0.000029147,
+            "location": "(3)Organisation.feature:44"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Application user is on  search user page$",
+    "steps": [
+      {
+        "name": "Application user is on  search user page",
+        "aggregatedDurations": {
+          "average": 0.002294462,
+          "median": 0.002218448
+        },
+        "durations": [
+          {
+            "duration": 0.001961873,
+            "location": "(2)User.feature:20"
+          },
+          {
+            "duration": 0.003477102,
+            "location": "(2)User.feature:20"
+          },
+          {
+            "duration": 0.003109686,
+            "location": "(2)User.feature:20"
+          },
+          {
+            "duration": 0.002475023,
+            "location": "(2)User.feature:35"
+          },
+          {
+            "duration": 0.001378935,
+            "location": "(2)User.feature:35"
+          },
+          {
+            "duration": 0.001364157,
+            "location": "(2)User.feature:35"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user selects the \"([^\"]*)\" dropdown$",
+    "steps": [
+      {
+        "name": "user selects the \"Email Address\" dropdown",
+        "aggregatedDurations": {
+          "average": 0.000100577,
+          "median": 0.000100577
+        },
+        "durations": [
+          {
+            "duration": 0.000105093,
+            "location": "(3)Organisation.feature:42"
+          },
+          {
+            "duration": 0.000096062,
+            "location": "(3)Organisation.feature:42"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Application user is on search Organisation page$",
+    "steps": [
+      {
+        "name": "Application user is on search Organisation page",
+        "aggregatedDurations": {
+          "average": 0.042473388,
+          "median": 0.042473388
+        },
+        "durations": [
+          {
+            "duration": 0.055869671,
+            "location": "(3)Organisation.feature:21"
+          },
+          {
+            "duration": 0.029077106,
+            "location": "(3)Organisation.feature:21"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Home page should be displayed$",
+    "steps": [
+      {
+        "name": "Home page should be displayed",
+        "aggregatedDurations": {
+          "average": 0.955094487,
+          "median": 0.930615611
+        },
+        "durations": [
+          {
+            "duration": 1.025152539,
+            "location": "(1)Login.feature:10"
+          },
+          {
+            "duration": 0.909515312,
+            "location": "(2)User.feature:10"
+          },
+          {
+            "duration": 0.930615611,
+            "location": "(3)Organisation.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user selects the Contact Details tab$",
+    "steps": [
+      {
+        "name": "user selects the Contact Details tab",
+        "aggregatedDurations": {
+          "average": 0.12145429,
+          "median": 0.12145429
+        },
+        "durations": [
+          {
+            "duration": 0.158035285,
+            "location": "(3)Organisation.feature:40"
+          },
+          {
+            "duration": 0.084873296,
+            "location": "(3)Organisation.feature:40"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User selects \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "User selects \"Ims Health\"",
+        "aggregatedDurations": {
+          "average": 0.588929845,
+          "median": 0.588929845
+        },
+        "durations": [
+          {
+            "duration": 0.588929845,
+            "location": "(3)Organisation.feature:36"
+          }
+        ]
+      },
+      {
+        "name": "User selects \"Gp Clinic\"",
+        "aggregatedDurations": {
+          "average": 0.356474736,
+          "median": 0.356474736
+        },
+        "durations": [
+          {
+            "duration": 0.356474736,
+            "location": "(3)Organisation.feature:36"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Enter \"([^\"]*)\" and select the \"([^\"]*)\" of Roles Tab$",
+    "steps": [
+      {
+        "name": "Enter \"IMSTest\" and select the \"Business Contact\" of Roles Tab",
+        "aggregatedDurations": {
+          "average": 4.527617914,
+          "median": 4.527617914
+        },
+        "durations": [
+          {
+            "duration": 4.527617914,
+            "location": "(2)User.feature:40"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Click on Add button$",
+    "steps": [
+      {
+        "name": "Click on Add button",
+        "aggregatedDurations": {
+          "average": 0.09598401,
+          "median": 0.09598401
+        },
+        "durations": [
+          {
+            "duration": 0.09598401,
+            "location": "(3)Organisation.feature:71"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user types in the \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user types in the \"Test Organisation -1\"",
+        "aggregatedDurations": {
+          "average": 0.183284707,
+          "median": 0.183284707
+        },
+        "durations": [
+          {
+            "duration": 0.183284707,
+            "location": "(3)Organisation.feature:37"
+          }
+        ]
+      },
+      {
+        "name": "user types in the \"Test Organisation -2\"",
+        "aggregatedDurations": {
+          "average": 0.178289504,
+          "median": 0.178289504
+        },
+        "durations": [
+          {
+            "duration": 0.178289504,
+            "location": "(3)Organisation.feature:37"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Save organization$",
+    "steps": [
+      {
+        "name": "Save organization",
+        "aggregatedDurations": {
+          "average": 2.071057872,
+          "median": 2.071057872
+        },
+        "durations": [
+          {
+            "duration": 2.075522479,
+            "location": "(3)Organisation.feature:54"
+          },
+          {
+            "duration": 2.066593265,
+            "location": "(3)Organisation.feature:54"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Select \"([^\"]*)\" with contact \"([^\"]*)\" of Contact Tab$",
+    "steps": [
+      {
+        "name": "Select \"Email Address\" with contact \"test1@mail.com\" of Contact Tab",
+        "aggregatedDurations": {
+          "average": 5.285325113,
+          "median": 5.285325113
+        },
+        "durations": [
+          {
+            "duration": 5.285325113,
+            "location": "(2)User.feature:39"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user select \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user select \"India\"",
+        "aggregatedDurations": {
+          "average": 0.706012512,
+          "median": 0.706012512
+        },
+        "durations": [
+          {
+            "duration": 0.706012512,
+            "location": "(3)Organisation.feature:49"
+          }
+        ]
+      },
+      {
+        "name": "user select \"Japan\"",
+        "aggregatedDurations": {
+          "average": 0.173265155,
+          "median": 0.173265155
+        },
+        "durations": [
+          {
+            "duration": 0.173265155,
+            "location": "(3)Organisation.feature:49"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user clicks the Add Contact Details button$",
+    "steps": [
+      {
+        "name": "user clicks the Add Contact Details button",
+        "aggregatedDurations": {
+          "average": 0.000030173,
+          "median": 0.000030173
+        },
+        "durations": [
+          {
+            "duration": 0.000034484,
+            "location": "(3)Organisation.feature:41"
+          },
+          {
+            "duration": 0.000025863,
+            "location": "(3)Organisation.feature:41"
+          }
+        ]
+      }
+    ]
+  }
+]
